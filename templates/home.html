@@ -1,0 +1,48 @@
+
+{% extends "layout.html" %}
+{% block title %}
+  {% if title %}
+    {{ title }}
+  {% else %}
+    No title
+  {% endif %}
+{% endblock%}
+
+  
+</head>
+
+{% block content %}
+<p class = "text-center m-5 fs-1">Akademics</p>
+
+<div class = "m-5" id ="tables">
+  {% for item in years: %}
+  <div class = "table border border-dark p-2" id ="">
+    <p class="text-center fs-2">Year {{item}}</p>
+
+    <p class="fs-4">Semister I</p>
+    <table class = "table">
+      <tr>
+        <th>Courses</th>
+        <th>Status</th>
+      </tr>
+      <!-- <tr>
+        <td></td>
+      </tr> -->
+    </table>
+
+    <p class="fs-4">Semister II</p>
+    <table class = "table">
+      <tr>
+        <th>Courses</th>
+        <th>Status</th>
+      </tr>
+      <!-- <tr>
+        <td></td>
+      </tr> -->
+    </table>
+  </div>
+
+  {% endfor %}
+</div>
+
+{% endblock %}
